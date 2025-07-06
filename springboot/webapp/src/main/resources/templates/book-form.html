@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Yeni Kitap Ekle</title>
+</head>
+<body>
+<h1>➕ Yeni Kitap Ekle</h1>
+<form th:action="@{/books}" th:object="${book}" method="post">
+    <label>Başlık:</label>
+    <input type="text" th:field="*{title}" required/><br/>
+    <label>Yazar:</label>
+    <input type="text" th:field="*{author}" required/><br/><br/>
+    <button type="submit">Kaydet</button>
+</form>
+<br>
+<a href="/books"><button>← Geri Dön</button></a>
+</body>
+</html>
